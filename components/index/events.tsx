@@ -1,0 +1,172 @@
+import React from "react";
+import Carousel from "./carousel";
+import Modal from "./eventModal";
+
+import dummy from "../../public/assets/events_dummy.png";
+import E1 from "../../public/assets/events/E1.png";
+import E3 from "../../public/assets/events/E3.png";
+
+const Events = () => {
+  const cards = [
+    {
+      key: 1,
+      content: (
+        <div className="event-card cursor-pointer group">
+          <img
+            src={`/images/inauguration.png`}
+            className="aspect-video h-[300px] w-[400px] shadow-lg rounded-md"
+            alt="Events"
+          />
+          <div className=" hidden text-center flex-col sm:gap-2 w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <p className="text-xl text-[#00D1FF] group-hover:mt-72">
+              Inauguration
+            </p>
+            <p className="text-xl text-white">12 May 2022</p>
+          </div>
+        </div>
+      ),
+      img: "/images/inauguration.png",
+      heading: "Inauguration",
+      desc: "Blockchain Club SRM, a pioneer student-led community dedicated to improving the web3 sector, was officially launched on 12th May 2022 at the SRM Institute of Science and Technology, Kattankulathur campus. The inauguration ceremony was graced by the presence of Dr. M. Lakshmi, the Head of Department of Data Science and Business Systems, who delivered the inaugural address and congratulated the founding members of the club for their initiative and vision. The founding members of the club, namely Aditya Jain, Sreeyom Sreesaan Nayak, Yash Khandelwal, and Sarvottam Mishra, introduced the clubs mission, vision, and objectives to the audience, which comprised of students, faculty, and industry experts. The club aims to provide students with opportunities and guidance to learn and explore the latest advancements in blockchain technology and its applications in various domains.",
+      date: "12 may ",
+    },
+    {
+      key: 2,
+      content: (
+        <div className="event-card cursor-pointer group ">
+          <img
+            src={`./images/decode.jpeg`}
+            className="aspect-video h-[300px] w-[400px] shadow-lg rounded-md"
+            alt="Events"
+          />
+          <div className=" hidden text-center flex-col sm:gap-2 w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <p className="text-xl text-[#00D1FF] group-hover:mt-80">De-code</p>
+            <p className="text-xl text-white">23 Sept 2022</p>
+          </div>
+        </div>
+      ),
+      img: "/images/decode.jpeg",
+      heading: "De-Code",
+      desc: "De-Code was organised by Blockchain Club SRM to help students comprehend the relationship between blockchain and emerging technologies. More than 250 students attended the event on September 23, 2022, from 2:00 to 5:00 p.m. in the G N Ramachandran Hall of the Biotechnology Building. Mr. Krishna, Blockchain Architect at Roni Analytics, and Mr. Chandrashekhar, Product Manager at Lumos Lab, were the keynote speakers. Sponsors of the event were Octaloop, Lumos Lab, and Roni Analytics.",
+      date: "23 sept",
+    },
+    {
+      key: 4,
+      content: (
+        <div className="event-card cursor-pointer group ">
+          <img
+            src={`/images/convulent.jpg`}
+            className="aspect-video h-[300px] w-[400px] shadow-lg rounded-md"
+            alt="Events"
+          />
+          <div className="hidden text-center flex-col sm:gap-2 w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <p className="text-xl text-[#00D1FF] group-hover:mt-96">
+              Convulent
+            </p>
+            <p className="text-xl text-white">28 Feb 2023</p>
+          </div>
+        </div>
+      ),
+      img: "/images/convulent.jpg",
+      heading: "Convulent",
+      desc: "The event proved to be a success and a meaningful discussion with many famous industrial people as speakers. They covered topics like Introduction to Web3, Distributed Databases, Relayers and Smart Contracts, Router protocol, Cross-chain communication, Bitcoin SV, Rust tutorial on Smart Contract Deployment, ESG Scores and Sustainable Development through 5ire, Solidity and Advanced Defi, App Dev in Web3 and Zero-knowledge Proof. Each session ended with a great discussion along with a Q/A session.",
+      date: "28 Feb 2023",
+    },
+    {
+      key: 3,
+      content: (
+        <div className="event-card cursor-pointer group ">
+          <img
+            src={`/images/byzantine.jpeg`}
+            className="aspect-video h-[300px] w-[400px] shadow-lg rounded-md"
+            alt="Events"
+          />
+          <div className="hidden text-center flex-col sm:gap-2 w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <p className="text-xl text-[#00D1FF] group-hover:mt-96">
+              Byzantine
+            </p>
+            <p className="text-xl text-white">13 June 2022</p>
+          </div>
+        </div>
+      ),
+      img: "/images/byzantine.png",
+      heading: "Byzantine",
+      desc: "Mr. Aishwary Gupta, who dispelled misunderstandings and offered insights into the world of Blockchain, including Crypto and Web3, was the speaker during an interactive session on Blockchain and its applications, organised by the Blockchain Club SRM.",
+      date: "13 june",
+    },
+    {
+      key: 5,
+      content: (
+        <div className="event-card cursor-pointer group ">
+          <img
+            src={`/images/Layer.png`}
+            className="aspect-video h-[300px] w-[400px] shadow-lg rounded-md"
+            alt="Events"
+          />
+          <div className="hidden text-center flex-col sm:gap-2 w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <p className="text-xl text-[#00D1FF] group-hover:mt-96">
+              Layer 1.0
+            </p>
+            <p className="text-xl text-white">17th - 18th April 2023</p>
+          </div>
+        </div>
+      ),
+      img: "/images/Layer.png",
+      heading: "Layer 1.0",
+      desc: "The Layer 0 hackathon was a successful event, attracting participants from different colleges and skill sets to create innovative solutions to the proposed tracks. Despite common challenges such as time constraints, technical difficulties, and the need for creativity, the event saw impressive solutions, including cutting-edge technologies and real-world problem-solving. Teams presented their project proposals through slides and visual aids, and the prize pool of $64,000 was a significant motivator. The diverse challenges encouraged a flexible and adaptable mindset, as unexpected issues may arise. The Layer 0 hackathon was a great success, thanks to the support of sponsors like 5irechain, Zeeve, Flow, Router, and Metastart.",
+      date: "17th - 18th April 2023",
+    },
+    {
+      key: 6,
+      content: (
+        <div className="event-card cursor-pointer group ">
+          <img
+            src={`/images/Arweave-1.jpg`}
+            className="aspect-video h-[300px] w-[400px] shadow-lg rounded-md"
+            alt="Events"
+          />
+          <div className="hidden text-center flex-col sm:gap-2 w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <p className="text-xl text-[#00D1FF] group-hover:mt-96">
+              Arweave
+            </p>
+            <p className="text-xl text-white">18th October 2023</p>
+          </div>
+        </div>
+      ),
+      img: "/images/Arweave-2.jpg",
+      heading: "Arweave",
+      desc: "The session commenced with a general introduction to Arweave. An interactive Q&A session followed, allowing participants to engage with the topic. The meeting was highly interactive, covering topics such as DApps (decentralized apps) and L1s (Layer 1 solutions). This was followed by an in-depth explanation of what sets Arweave apart from platforms like Google and Azure.The discussion delved into how data stored on Arweave is permanent and censorship-free, illustrated through examples such as the China and COVID use case.The HOD of the DSBS department, Dr. M lakshmi, briefly chaired the session. She welcomed the participants, expressed gratitude towards the session heads, and shared important information about upcoming in-house projects on campus.The meeting included a Q&A round where participants raised questions concerning privacy concerns and the direct transfer of data.",
+      date: "18th October 2023",
+    },
+  ];
+  return (
+    <>
+      <div className="relative" id="events">
+        <div className="flex flex-col justify-center gap-12 my-36 relative">
+          <h6 className="text-transparent bg-clip-text bg-subheading-gradient max-w-max self-center font-normal">
+            Explore Our New & Upcoming Events
+          </h6>
+
+          <h1 className="font-bold self-center text-white">Our Events</h1>
+
+          <Carousel cards={cards} showArrows={true} className="carousel" />
+
+          <img
+            src="assets/event-top-hand.png"
+            alt=""
+            className="absolute left-0 transform -translate-x-1/2 -translate-y-1/2 scale-75 -z-10 top-1/2"
+          />
+
+          <img
+            src="assets/event-bottom-hand.png"
+            alt=""
+            className="absolute right-0 transform translate-x-1/2 translate-y-1/2 scale-50 -z-10 bottom-0"
+          />
+        </div>
+      </div>
+      <Modal />
+    </>
+  );
+};
+
+export default Events;

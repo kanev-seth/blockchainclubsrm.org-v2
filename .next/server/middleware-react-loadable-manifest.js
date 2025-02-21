@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST="{\"..\\\\components\\\\index\\\\carousel.tsx -> react-spring-3d-carousel\":{\"id\":\"..\\\\components\\\\index\\\\carousel.tsx -> react-spring-3d-carousel\",\"files\":[\"static/chunks/node_modules_react-spring-3d-carousel_dist_bundle_js.js\"]}}"
